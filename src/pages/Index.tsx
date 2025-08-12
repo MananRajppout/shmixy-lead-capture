@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
-import { Brain, Code2, Rocket, CheckCircle2 } from "lucide-react";
+import { Bot, Mic, Code2, CheckCircle2 } from "lucide-react";
 
 const blockedDomains = new Set([
   "gmail.com",
@@ -111,7 +111,7 @@ const Index = () => {
         <div className="container mx-auto flex items-center justify-between py-4">
           <a href="#" className="font-bold text-xl tracking-tight">Shmixy</a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#features" className="hover:text-foreground transition-colors">Features</a>
+            <a href="#features" className="hover:text-foreground transition-colors">Solutions</a>
             <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
           </nav>
         </div>
@@ -123,21 +123,21 @@ const Index = () => {
           <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center py-20">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-                <span className="text-gradient-primary">Shmixy</span> — AI & Programming Solutions
+                <span className="text-gradient-primary">Shmixy</span> — Automate your business with AI
               </h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-prose">
-                Learn, build, and accelerate with modern AI tooling and expert programming guidance. We help you move from idea to production, fast.
+                We build AI voice agents, automate operations with intelligent workflows, and craft high-quality websites and apps to drive growth.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild variant="hero" size="lg">
-                  <a href="#contact">Get early access</a>
+                  <a href="#contact">Get a free consultation</a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a href="#features">Learn more</a>
+                  <a href="#features">Explore solutions</a>
                 </Button>
               </div>
               <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="opacity-80" /> No spam — we’ll only email about Shmixy.
+                <CheckCircle2 className="opacity-80" /> No spam — we’ll only email about Shmixy services.
               </div>
             </div>
             <div className="relative">
@@ -154,19 +154,19 @@ const Index = () => {
         <section id="features" className="container mx-auto py-16">
           <div className="grid md:grid-cols-3 gap-6">
             <article className="rounded-lg border border-border p-6 bg-card shadow-sm transition-transform hover:-translate-y-0.5">
-              <Brain />
-              <h3 className="mt-4 font-semibold text-lg">AI-powered workflows</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Integrate LLMs, automation, and data pipelines tailored to your product.</p>
+              <Mic />
+              <h3 className="mt-4 font-semibold text-lg">AI Voice Agents</h3>
+              <p className="mt-2 text-sm text-muted-foreground">24/7 agents that answer calls, qualify leads, book appointments, and support customers in natural voice.</p>
+            </article>
+            <article className="rounded-lg border border-border p-6 bg-card shadow-sm transition-transform hover:-translate-y-0.5">
+              <Bot />
+              <h3 className="mt-4 font-semibold text-lg">Process Automation</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Intelligent workflows that handle repetitive work, integrate your tools, and keep teams in sync.</p>
             </article>
             <article className="rounded-lg border border-border p-6 bg-card shadow-sm transition-transform hover:-translate-y-0.5">
               <Code2 />
-              <h3 className="mt-4 font-semibold text-lg">Expert programming</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Battle-tested patterns, clean architecture, and rapid iteration.</p>
-            </article>
-            <article className="rounded-lg border border-border p-6 bg-card shadow-sm transition-transform hover:-translate-y-0.5">
-              <Rocket />
-              <h3 className="mt-4 font-semibold text-lg">Faster to production</h3>
-              <p className="mt-2 text-sm text-muted-foreground">From prototype to launch with reliability, monitoring, and quality.</p>
+              <h3 className="mt-4 font-semibold text-lg">Websites & Apps</h3>
+              <p className="mt-2 text-sm text-muted-foreground">High-quality, fast websites and applications engineered for conversions, reliability, and scale.</p>
             </article>
           </div>
         </section>
@@ -174,9 +174,9 @@ const Index = () => {
         <section id="contact" className="border-t border-border bg-muted/30">
           <div className="container mx-auto py-16">
             <div className="max-w-2xl mx-auto">
-              <h2 className="text-3xl font-bold">Request Early Access</h2>
+              <h2 className="text-3xl font-bold">Get a Free Consultation</h2>
               <p className="mt-2 text-muted-foreground">
-                Business emails only. Free providers like Gmail/Outlook are blocked.
+                Tell us about your goals. Business emails only; free providers like Gmail/Outlook are blocked.
               </p>
               <form onSubmit={handleSubmit} className="mt-8 grid gap-6">
                 <div className="grid gap-2">
@@ -202,12 +202,12 @@ const Index = () => {
                   )}
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="message">What do you want to build?</Label>
-                  <Textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} placeholder="Tell us a bit about your goals..." />
+                  <Label htmlFor="message">What can we automate or build for you?</Label>
+                  <Textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} placeholder="Describe your processes, tools, and desired outcome..." />
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <Button type="submit" size="lg" variant="hero" disabled={loading || !businessValid}>
-                    {loading ? "Sending..." : "Send request"}
+                    {loading ? "Sending..." : "Request consultation"}
                   </Button>
                   <p className="text-xs text-muted-foreground">We’ll reply from igindi18@gmail.com</p>
                 </div>
@@ -220,7 +220,7 @@ const Index = () => {
       <footer className="border-t border-border">
         <div className="container mx-auto py-6 text-sm text-muted-foreground flex flex-col md:flex-row gap-2 items-center justify-between">
           <span>© {new Date().getFullYear()} Shmixy</span>
-          <a href="#contact" className="hover:text-foreground">Get early access</a>
+          <a href="#contact" className="hover:text-foreground">Get a free consultation</a>
         </div>
       </footer>
     </div>
