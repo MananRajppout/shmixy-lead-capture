@@ -214,7 +214,7 @@ const Index = () => {
                   <Button type="submit" size="lg" variant="hero" disabled={loading || !businessValid}>
                     {loading ? "Sending..." : "Request consultation"}
                   </Button>
-                  <p className="text-xs text-muted-foreground">We’ll reply from igindi18@gmail.com</p>
+                  
                 </div>
               </form>
             </div>
