@@ -119,7 +119,7 @@ const Index = () => {
 
       <main>
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-hero-gradient opacity-20" aria-hidden />
+          <div className="absolute inset-0 bg-hero-gradient opacity-20 pointer-events-none" aria-hidden />
           <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center py-20">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
