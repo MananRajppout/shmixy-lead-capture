@@ -123,22 +123,27 @@ const Index = () => {
           <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center py-20">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-                <span className="text-gradient-primary">Shmixy</span> — Automate your business with AI
+                Meet Your New Team Member: AI. Always On. Always Selling. Always Supporting.
               </h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-prose">
-                We build AI voice agents, automate operations with intelligent workflows, and craft high-quality websites and apps to drive growth.
+                Boost sales, wow customers, and never miss a beat — with AI tailored to your essential needs.
               </p>
+              <ul className="mt-6 space-y-2 text-muted-foreground">
+                <li className="flex items-center gap-2"><CheckCircle2 className="text-primary opacity-90" /><span>Smarter Sales</span></li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="text-primary opacity-90" /><span>Better Customer Support</span></li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="text-primary opacity-90" /><span>Real Results — Fast</span></li>
+              </ul>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild variant="hero" size="lg">
-                  <a href="#contact">Get a free consultation</a>
+                  <a href="#contact" aria-label="Schedule a meeting with Shmixy">Schedule a meeting</a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <a href="#features">Explore solutions</a>
                 </Button>
               </div>
-              <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="opacity-80" /> No spam — we’ll only email about Shmixy services.
-              </div>
+              <p className="mt-3 text-sm text-muted-foreground">
+                See what success can look like in just 60 days.
+              </p>
             </div>
             <div className="relative">
               <img
